@@ -52,18 +52,18 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot" Background="White">
-		<Image x:Name="BACKGROUND" Source="регистрация imp_Images/BACKGROUND.png" Width="783" Height="587"/>
+		<Image x:Name="BACKGROUND" Source="registrationImages/BACKGROUND.png" Width="783" Height="587"/>
 		<Path x:Name="background" Data="F1M1,1C1,1 786,1 786,1 786,1 786,48.161 786,48.161 786,48.161 1,48.161 1,48.161 1,48.161 1,1 1,1z" Fill="#FF00D5C3" Height="50" VerticalAlignment="Top" Stretch="Fill"/>
 		<Canvas x:Name="правила_imp" ClipToBounds="True" HorizontalAlignment="Left" Height="575" UseLayoutRounding="False" VerticalAlignment="Top" Width="783">
 			<Canvas x:Name="Группа_1" Height="403" Canvas.Left="205" Canvas.Top="127" Width="353">
-				<Image x:Name="___игра_менеджмент" Height="70" Canvas.Left="60" Source="правила imp_Images\ игра менеджмент.png" Canvas.Top="0" Width="255"/>
-				<Canvas x:Name="Новая_игра" Height="105" Canvas.Left="30" Canvas.Top="122" Width="70">
+				<!--<Image x:Name="___игра_менеджмент" Height="70" Canvas.Left="60" Source="правила imp_Images\ игра менеджмент.png" Canvas.Top="0" Width="255"/>
+				--><Canvas x:Name="Новая_игра" Height="105" Canvas.Left="30" Canvas.Top="122" Width="70">
 					<TextBlock x:Name="Новая_игра1" Foreground="#FFFFFFFF" FontSize="23.471" FontFamily="Oswald" IsHyphenationEnabled="True" Canvas.Left="1.322" TextAlignment="Center" TextWrapping="Wrap" Text="Новая игра" Canvas.Top="86.27">
 						<TextBlock.RenderTransform>
 							<MatrixTransform Matrix="0.654,0,0,0.654,0,0"/>
 						</TextBlock.RenderTransform>
 					</TextBlock>
-					<Button x:Name="Ngame" Content="Button" Height="50" Canvas.Left="11" Style="{DynamicResource Ngame}" Width="49" Background="#FF1FD6C1">
+					<Button x:Name="Ngame" Content="Button" Height="50" Canvas.Left="11" Style="{DynamicResource Ngame}" Width="49" Background="#FF1FD6C1" Click="Ngame_Click">
 						<i:Interaction.Triggers>
 							<i:EventTrigger EventName="Click">
 								<pi:NavigateToScreenAction TargetScreen="WpfPrototype1Screens.Game"/>

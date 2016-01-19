@@ -85,6 +85,7 @@
     <Compile Include="Screen_3.xaml.cs">
       <DependentUpon>Screen_3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SocketClient.cs" />
     <Page Include="Game.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -190,24 +191,30 @@
     <Resource Include="правила imp_Images\hard_disk_download.png" />
     <Resource Include="правила imp_Images\hard_disk_network.png" />
     <Resource Include="правила imp_Images\script.png" />
-    <Resource Include="регистрация imp_Images\1 ic.png" />
-    <Resource Include="регистрация imp_Images\10 ic.png" />
-    <Resource Include="регистрация imp_Images\2 ic.png" />
-    <Resource Include="регистрация imp_Images\3 ic.png" />
-    <Resource Include="регистрация imp_Images\4 ic.png" />
-    <Resource Include="регистрация imp_Images\5 ic.png" />
-    <Resource Include="регистрация imp_Images\6 ic.png" />
-    <Resource Include="регистрация imp_Images\7 ic.png" />
-    <Resource Include="регистрация imp_Images\8 ic.png" />
-    <Resource Include="регистрация imp_Images\9 ic.png" />
-    <Resource Include="регистрация imp_Images\Ava BG.png" />
-    <Resource Include="регистрация imp_Images\BACKGROUND.png" />
-    <Resource Include="регистрация imp_Images\Help icon.png" />
-    <Resource Include="регистрация imp_Images\LOGO.png" />
-    <Resource Include="регистрация imp_Images\SOCIAL.png" />
-    <Resource Include="регистрация imp_Images\User icon.png" />
-    <Resource Include="регистрация imp_Images\Vhod.png" />
-    <Resource Include="регистрация imp_Images\x копия.png" />
+    <Resource Include="registrationImages\1 ic.png" />
+    <Resource Include="registrationImages\10 ic.png" />
+    <Resource Include="registrationImages\2 ic.png" />
+    <Resource Include="registrationImages\3 ic.png" />
+    <Resource Include="registrationImages\4 ic.png" />
+    <Resource Include="registrationImages\5 ic.png" />
+    <Resource Include="registrationImages\6 ic.png" />
+    <Resource Include="registrationImages\7 ic.png" />
+    <Resource Include="registrationImages\8 ic.png" />
+    <Resource Include="registrationImages\9 ic.png" />
+    <Resource Include="registrationImages\Ava BG.png" />
+    <Resource Include="registrationImages\BACKGROUND.png" />
+    <Resource Include="registrationImages\Help icon.png" />
+    <Resource Include="registrationImages\LOGO.png" />
+    <Resource Include="registrationImages\SOCIAL.png" />
+    <Resource Include="registrationImages\User icon.png" />
+    <Resource Include="registrationImages\Vhod.png" />
+    <Resource Include="registrationImages\x копия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Google Диск\ManG\Mang_Copy1_Copy1\Mang\Mang.csproj">
+      <Project>{C2AFC6A9-B950-470E-8271-1DFF17059300}</Project>
+      <Name>Mang</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="crown_main.png">
@@ -218,10 +225,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="1 ic.png" />
+    <Resource Include="10 ic.png" />
+    <Resource Include="2 ic.png" />
+    <Resource Include="3 ic.png" />
+    <Resource Include="4 ic.png" />
+    <Resource Include="5 ic.png" />
+    <Resource Include="6 ic.png" />
+    <Resource Include="7 ic.png" />
+    <Resource Include="8 ic.png" />
+    <Resource Include="9 ic.png" />
+    <Resource Include="Ava BG.png" />
+    <Resource Include="BACKGROUND.png" />
+    <Resource Include="Help icon.png" />
+    <Resource Include="LOGO.png" />
     <Content Include="Overwerk - Daybreak %28Original Mix%29.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="правила imp_Images\игра менеджмент.png" />
+    <Resource Include="SOCIAL.png" />
+    <Resource Include="User icon.png" />
+    <Resource Include="Vhod.png" />
+    <Resource Include="x копия.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath32)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

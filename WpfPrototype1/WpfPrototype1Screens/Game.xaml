@@ -33,7 +33,7 @@
 	<Grid x:Name="LayoutRoot" Background="White" Width="783" Height="587">
 		<Canvas x:Name="Игровое_поле_imp" ClipToBounds="True" HorizontalAlignment="Left" Height="587" UseLayoutRounding="False" VerticalAlignment="Top" Width="783">
 			<Canvas x:Name="Группа_2" Height="595" Canvas.Left="-6" Canvas.Top="-7" Width="792">
-				<Image x:Name="BACKGROUND" Height="595" Source="/Mang;component/New Folder1/Игровое поле imp_Images/BACKGROUND.png" Canvas.Top="0" Width="792" Canvas.Left="5"/>
+				<Image x:Name="BACKGROUND" Height="595" Source="BACKGROUND.png" Canvas.Top="0" Width="792" Canvas.Left="5"/>
 				<Canvas x:Name="Действия_игрока" Height="466" Canvas.Left="20" Canvas.Top="123" Width="411">
 					<Path x:Name="background" Data="F1M1.006,1.149C1.006,1.149 409.577,1.149 409.577,1.149 409.577,1.149 409.577,347.312 409.577,347.312 409.577,347.312 1.006,347.312 1.006,347.312 1.006,347.312 1.006,1.149 1.006,1.149z" Height="349" Canvas.Left="0" Canvas.Top="0" Width="411">
 						<Path.Fill>
@@ -56,12 +56,12 @@
 								<Path x:Name="Clipping_Mask1" Data="F1M17.937,1.682C27.002,1.682 34.35,9.042 34.35,18.12 34.35,27.199 27.002,34.558 17.937,34.558 8.872,34.558 1.524,27.199 1.524,18.12 1.524,9.042 8.872,1.682 17.937,1.682z" Fill="#FF9D97FB" Height="36" Canvas.Left="2" Canvas.Top="122" Width="36"/>
 								<Path x:Name="Clipping_Mask" Data="F1M17.937,1.293C27.002,1.293 34.35,8.655 34.35,17.737 34.35,26.819 27.002,34.181 17.937,34.181 8.872,34.181 1.524,26.819 1.524,17.737 1.524,8.655 8.872,1.293 17.937,1.293z" Fill="#FF00D5C3" Height="36" Canvas.Left="2" Canvas.Top="298" Width="36"/>
 							</Canvas>
-							<Image x:Name="Слой_3" Height="22" Canvas.Left="9" Source="/Mang;component/New Folder1/Игровое поле imp_Images/Слой 3.png" Canvas.Top="189" Width="22"/>
-							<Image x:Name="check_money" Height="25" Canvas.Left="8" Source="/Mang;component/New Folder1/Игровое поле imp_Images/check_money.png" Canvas.Top="127" Width="25" VerticalAlignment="Center"/>
-							<Image x:Name="shopping_cart" Height="22" Canvas.Left="8" Source="/Mang;component/New Folder1/Игровое поле imp_Images/shopping_cart.png" Canvas.Top="68" Width="23"/>
-							<Image x:Name="box" Height="22" Canvas.Left="9" Source="/Mang;component/New Folder1/Игровое поле imp_Images/box.png" Canvas.Top="7" Width="22"/>
-							<Image x:Name="genius" Height="26" Canvas.Left="6" Source="/Mang;component/New Folder1/Игровое поле imp_Images/genius.png" Canvas.Top="303" Width="26"/>
-							<Image x:Name="oven_stove" Height="23" Canvas.Left="10" Source="/Mang;component/New Folder1/Игровое поле imp_Images/oven_stove.png" Canvas.Top="247" Width="18"/>
+							<Image x:Name="Слой_3" Height="22" Canvas.Left="9" Source="Игровое поле imp_Images/Слой 3.png" Canvas.Top="189" Width="22"/>
+							<Image x:Name="check_money" Height="25" Canvas.Left="8" Source="Игровое поле imp_Images/check_money.png" Canvas.Top="127" Width="25" VerticalAlignment="Center"/>
+							<Image x:Name="shopping_cart" Height="22" Canvas.Left="8" Source="Игровое поле imp_Images/shopping_cart.png" Canvas.Top="68" Width="23"/>
+							<Image x:Name="box" Height="22" Canvas.Left="9" Source="Игровое поле imp_Images/box.png" Canvas.Top="7" Width="22"/>
+							<Image x:Name="genius" Height="26" Canvas.Left="6" Source="Игровое поле imp_Images/genius.png" Canvas.Top="303" Width="26"/>
+							<Image x:Name="oven_stove" Height="23" Canvas.Left="10" Source="Игровое поле imp_Images/oven_stove.png" Canvas.Top="247" Width="18"/>
 							<Canvas x:Name="Строки" Height="248" Canvas.Left="0" Canvas.Top="50" Width="281">
 								<Path x:Name="divider2" Data="F1M1.853,2.026C1.853,2.026 1.853,1.52 1.853,1.52 1.853,1.52 279.672,1.52 279.672,1.52 279.672,1.52 279.672,2.026 279.672,2.026 279.672,2.026 1.853,2.026 1.853,2.026z" Height="4" Canvas.Left="0" Canvas.Top="57" Width="281">
 									<Path.Effect>
@@ -289,7 +289,7 @@
 				<Canvas x:Name="Банк" Height="228" Canvas.Left="468" Canvas.Top="143" Width="301">
 					<Canvas x:Name="Банк1" Height="228" Canvas.Left="0" Canvas.Top="0" Width="301">
 						<Canvas x:Name="Группа_1" Height="43" Canvas.Left="13" Canvas.Top="23" Width="278">
-							<Image x:Name="inputfield_копия_4" Height="43" Canvas.Left="202" Source="/Mang;component/New Folder1/Игровое поле imp_Images/inputfield копия 153.png" Canvas.Top="0" Width="76"/>
+							<Image x:Name="inputfield_копия_4" Height="43" Canvas.Left="202" Source="Игровое поле imp_Images/inputfield копия 153.png" Canvas.Top="0" Width="76"/>
 							<TextBlock x:Name="Максимальная_цена_ЕГП" Foreground="#FFFFFFFF" FontSize="29.333" FontFamily="Oswald" Height="40.327" LineStackingStrategy="BlockLineHeight" Canvas.Left="-0.943" LineHeight="38" TextAlignment="Left" TextWrapping="Wrap" Text="Максимальная цена ЕГП" Canvas.Top="11.896" Width="391.281">
 								<TextBlock.RenderTransform>
 									<MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
@@ -297,7 +297,7 @@
 							</TextBlock>
 						</Canvas>
 						<Canvas x:Name="Группа_1_копия" Height="43" Canvas.Left="13" Canvas.Top="77" Width="278">
-							<Image x:Name="inputfield_копия_3" Height="43" Canvas.Left="202" Source="/Mang;component/New Folder1/Игровое поле imp_Images/inputfield копия 152.png" Canvas.Top="0" Width="76"/>
+							<Image x:Name="inputfield_копия_3" Height="43" Canvas.Left="202" Source="Игровое поле imp_Images/inputfield копия 152.png" Canvas.Top="0" Width="76"/>
 							<TextBlock x:Name="Минимальная_цена_ЕСМ" Foreground="#FFFFFFFF" FontSize="29.333" FontFamily="Oswald" Height="40.327" LineStackingStrategy="BlockLineHeight" Canvas.Left="-0.943" LineHeight="38" TextAlignment="Left" TextWrapping="Wrap" Text="Минимальная цена ЕСМ" Canvas.Top="11.718" Width="401.182">
 								<TextBlock.RenderTransform>
 									<MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
@@ -305,13 +305,13 @@
 							</TextBlock>
 						</Canvas>
 						<Canvas x:Name="Группа_1_копия_2" Height="42" Canvas.Left="13" Canvas.Top="131" Width="278">
-							<Image x:Name="inputfield_копия_1" Height="42" Canvas.Left="202" Source="/Mang;component/New Folder1/Игровое поле imp_Images/inputfield копия 151.png" Canvas.Top="0" Width="76"/>
+							<Image x:Name="inputfield_копия_1" Height="42" Canvas.Left="202" Source="Игровое поле imp_Images/inputfield копия 151.png" Canvas.Top="0" Width="76"/>
 							<TextBlock x:Name="Максимальная_кол_во_ЕГП" Foreground="#FFFFFFFF" FontSize="29.333" FontFamily="Oswald" Height="42.303" LineStackingStrategy="BlockLineHeight" Canvas.Left="-0.943" LineHeight="38" TextAlignment="Left" TextWrapping="Wrap" Canvas.Top="10.153" Width="391.281"><TextBlock.RenderTransform>
 									<MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
 								</TextBlock.RenderTransform><Run Text="Максимальная "/><Run Text="кол-во ЕГП"/></TextBlock>
 						</Canvas>
 						<Canvas x:Name="Группа_1_копия_3" Height="43" Canvas.Left="13" Canvas.Top="183" Width="278">
-							<Image x:Name="inputfield_копия_15" Height="43" Canvas.Left="202" Source="/Mang;component/New Folder1/Игровое поле imp_Images/inputfield копия 15.png" Canvas.Top="0" Width="76"/>
+							<Image x:Name="inputfield_копия_15" Height="43" Canvas.Left="202" Source="Игровое поле imp_Images/inputfield копия 15.png" Canvas.Top="0" Width="76"/>
 							<TextBlock x:Name="Максимальная_кол_во_ЕСМ" Foreground="#FFFFFFFF" FontSize="29.333" FontFamily="Oswald" Height="42.303" LineStackingStrategy="BlockLineHeight" Canvas.Left="-0.943" LineHeight="38" TextAlignment="Left" TextWrapping="Wrap" Text="Максимальная кол-во ЕСМ" Canvas.Top="10.813" Width="385.34">
 								<TextBlock.RenderTransform>
 									<MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
@@ -323,7 +323,7 @@
 								<MatrixTransform Matrix="1.423,0,0,1.413,0,0"/>
 							</TextBlock.RenderTransform>
 						</TextBlock>
-						<Image x:Name="background_bank" Height="209" Canvas.Left="0" Source="/Mang;component/New Folder1/Игровое поле imp_Images/background_bank.png" Canvas.Top="19" Width="301"/>
+						<Image x:Name="background_bank" Height="209" Canvas.Left="0" Source="Игровое поле imp_Images/background_bank.png" Canvas.Top="19" Width="301"/>
 					</Canvas>
 					<Grid Height="206.5" Canvas.Left="214.5" Canvas.Top="21.5" Width="78.5">
 						<TextBlock x:Name="Max_EGP" Height="30.5" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="7,8.5,5,0"><Run Language="ru-ru" Text="0000"/></TextBlock>
@@ -333,35 +333,35 @@
 					</Grid>
 				</Canvas>
 				<Canvas x:Name="Top" Height="119" Canvas.Left="0" Canvas.Top="0" Width="792">
-					<Image x:Name="background_top" Height="119" Canvas.Left="0" Source="/Mang;component/New Folder1/Игровое поле imp_Images/background_top.png" Canvas.Top="0" Width="792"/>
+					<Image x:Name="background_top" Height="119" Canvas.Left="0" Source="Игровое поле imp_Images/background_top.png" Canvas.Top="0" Width="792"/>
 					<WrapPanel Canvas.Left="20" Orientation="Vertical" Canvas.Top="50" Width="560">
 						<Canvas x:Name="HEADER" Height="64" Width="560">
 							<Canvas x:Name="_1_pl" Height="64" Canvas.Left="0" Canvas.Top="0" Width="128">
-								<Image x:Name="_1_ava" Height="64" Canvas.Left="0" Source="/Mang;component/New Folder1/Игровое поле imp_Images/CUBEN-12-Space-9-iPad3-SimonCPage2.png" Canvas.Top="0" Width="65"/>
+								<Image x:Name="_1_ava" Height="64" Canvas.Left="0" Source="Игровое поле imp_Images/CUBEN-12-Space-9-iPad3-SimonCPage2.png" Canvas.Top="0" Width="65"/>
 								<TextBlock x:Name="Счёт__1000__" Foreground="#FFFFFFFF" FontSize="48" FontFamily="Oswald" IsHyphenationEnabled="True" Canvas.Left="69.569" TextAlignment="Left" TextWrapping="Wrap" Text="Счёт: " Canvas.Top="45.532">
 									<TextBlock.RenderTransform>
 										<MatrixTransform Matrix="0.27,0,0,0.271,0,0"/>
 									</TextBlock.RenderTransform>
 								</TextBlock>
-								<Image x:Name="crown" Height="18" Canvas.Left="67" Source="/Mang;component/New Folder1/Игровое поле imp_Images/crown.png" Canvas.Top="13" Width="18"/>
-								<TextBlock x:Name="name1" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="69" Canvas.Top="31.835" Width="59" FontSize="13.333" Text="RTmen"/>
+								<Image x:Name="crown" Height="18" Canvas.Left="67" Source="Игровое поле imp_Images/crown.png" Canvas.Top="13" Width="18"/>
+								<TextBlock x:Name="name1" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="69" Canvas.Top="31.835" Width="59" FontSize="13.333" Text="RTmen" Loaded="name1_Loaded"/>
 								<TextBlock x:Name="money1" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="96.666" Canvas.Top="47.335" Width="38.667" FontSize="10.667" Text="10 000" FontStyle="Italic"/>
 							</Canvas>
 							<Canvas x:Name="_2_pl" Height="64" Canvas.Left="139" Canvas.Top="0" Width="135">
-								<Image x:Name="_2_ava" Height="64" Canvas.Left="0" Source="/Mang;component/New Folder1/Игровое поле imp_Images/CUBEN-12-Space-9-iPad3-SimonCPage1.png" Canvas.Top="0" Width="65" Opacity="0.13"/>
+								<Image x:Name="_2_ava" Height="64" Canvas.Left="0" Source="Игровое поле imp_Images/CUBEN-12-Space-9-iPad3-SimonCPage1.png" Canvas.Top="0" Width="65" Opacity="0.13"/>
 								<Image Height="30" Canvas.Left="-82.069" Source="pack://siteoforigin:,,,/crown_main.png" Stretch="Fill" Canvas.Top="5" Width="38"/>
 								<TextBlock x:Name="Счёт__1000___копия" Foreground="#FFFFFFFF" FontSize="48" FontFamily="Oswald" IsHyphenationEnabled="True" Canvas.Left="68.783" TextAlignment="Left" TextWrapping="Wrap" Text="Счёт: " Canvas.Top="45.532">
 									<TextBlock.RenderTransform>
 										<MatrixTransform Matrix="0.27,0,0,0.271,0,0"/>
 									</TextBlock.RenderTransform>
 								</TextBlock>
-								<Image x:Name="crown_копия" Height="18" Canvas.Left="67" Source="/Mang;component/New Folder1/Игровое поле imp_Images/crown копия.png" Canvas.Top="13" Width="18" OpacityMask="#FFCAF70C"/>
+								<Image x:Name="crown_копия" Height="18" Canvas.Left="67" Source="Игровое поле imp_Images/crown копия.png" Canvas.Top="13" Width="18" OpacityMask="#FFCAF70C"/>
 								<TextBlock x:Name="name2" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="69" Canvas.Top="31.835" Width="59" FontSize="13.333" Text="Player 2"/>
 								<TextBlock x:Name="money2" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="96.666" Canvas.Top="47.335" Width="38.667" FontSize="10.667" FontStyle="Italic"/>
 							</Canvas>
 							<Canvas x:Name="_3_pl" Height="64" Canvas.Left="291" Canvas.Top="0" Width="126">
-								<Image x:Name="crown_копия_2" Height="18" Canvas.Left="66" Source="/Mang;component/New Folder1/Игровое поле imp_Images/crown копия 2.png" Canvas.Top="13" Width="18"/>
-								<Image x:Name="_3_ava" Height="64" Canvas.Left="0" Source="/Mang;component/New Folder1/Игровое поле imp_Images/CUBEN-12-Space-9-iPad3-SimonCPage.png" Canvas.Top="0" Width="64" Opacity="0.13"/>
+								<Image x:Name="crown_копия_2" Height="18" Canvas.Left="66" Source="Игровое поле imp_Images/crown копия 2.png" Canvas.Top="13" Width="18"/>
+								<Image x:Name="_3_ava" Height="64" Canvas.Left="0" Source="Игровое поле imp_Images/CUBEN-12-Space-9-iPad3-SimonCPage.png" Canvas.Top="0" Width="64" Opacity="0.13"/>
 								<TextBlock x:Name="Счёт__1000___копия_2" Foreground="#FFFFFFFF" FontSize="48" FontFamily="Oswald" IsHyphenationEnabled="True" Canvas.Left="68.384" TextAlignment="Left" TextWrapping="Wrap" Text="Счёт" Canvas.Top="45.532">
 									<TextBlock.RenderTransform>
 										<MatrixTransform Matrix="0.27,0,0,0.271,0,0"/>
@@ -371,8 +371,8 @@
 								<TextBlock x:Name="money3" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="96.666" Canvas.Top="47.335" Width="38.667" FontSize="10.667" FontStyle="Italic"/>
 							</Canvas>
 							<Canvas x:Name="_4_pl" Height="64" Canvas.Left="433" Canvas.Top="0" Width="127">
-								<Image x:Name="crown_копия_3" Height="18" Canvas.Left="67" Source="/Mang;component/New Folder1/Игровое поле imp_Images/crown копия 3.png" Canvas.Top="11" Width="18"/>
-								<Image x:Name="_4_ava" Height="64" Canvas.Left="0" Source="/Mang;component/New Folder1/Игровое поле imp_Images/4 аватар.png" Canvas.Top="0" Width="65" Opacity="0.13"/>
+								<Image x:Name="crown_копия_3" Height="18" Canvas.Left="67" Source="Игровое поле imp_Images/crown копия 3.png" Canvas.Top="11" Width="18"/>
+								<Image x:Name="_4_ava" Height="64" Canvas.Left="0" Source="Игровое поле imp_Images/4 аватар.png" Canvas.Top="0" Width="65" Opacity="0.13"/>
 								<TextBlock x:Name="Счёт__1000___копия_3" Foreground="#FFFFFFFF" FontSize="48" FontFamily="Oswald" IsHyphenationEnabled="True" Canvas.Left="69.437" TextAlignment="Left" TextWrapping="Wrap" Text="Счёт: " Canvas.Top="45.532">
 									<TextBlock.RenderTransform>
 										<MatrixTransform Matrix="0.27,0,0,0.271,0,0"/>
@@ -381,7 +381,7 @@
 								<TextBlock x:Name="name4" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="69" Canvas.Top="31.835" Width="59" FontSize="13.333" Text="Player 4"/>
 								<TextBlock x:Name="money4" Height="15.167" TextWrapping="Wrap" Foreground="White" FontFamily="Oswald" Canvas.Left="96.666" Canvas.Top="47.335" Width="38.667" FontSize="10.667" FontStyle="Italic"/>
 							</Canvas>
-							<Image Height="57.333" Canvas.Left="4" Source="регистрация imp_Images/1 ic.png" Stretch="Fill" Canvas.Top="4" Width="56"/>
+							<Image Height="57.333" Canvas.Left="4" Source="регистрация imp_Images/1 ic.png" Stretch="Fill" Canvas.Top="4" Width="56" Loaded="Image_Loaded"/>
 						</Canvas>
 					</WrapPanel>
 					<TextBlock x:Name="Время_игры___00_00_60" Foreground="#FFFFFFFF" FontSize="89.333" FontFamily="Oswald" Canvas.Left="599.65" TextWrapping="Wrap" Text="Время игры:  " Canvas.Top="54.58">

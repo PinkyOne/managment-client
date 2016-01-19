@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -54,6 +55,26 @@ namespace WpfPrototype1Screens
         {
         	System.Diagnostics.Process
                .Start(@"HELP.chm");
+        }
+
+        private void Ngame_Click(object sender, RoutedEventArgs e)
+        {
+            StartServer();
+        }
+
+	    private void StartServer()
+	    {
+            var processInfo = new ProcessStartInfo("java.exe", @"-jar C:\Users\Alex\Documents\GitHub\managment\server\target\server-1.0-SNAPSHOT.jar")
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false
+            };
+            Process proc;
+
+            if ((proc = Process.Start(processInfo)) == null)
+            {
+                throw new InvalidOperationException("??");
+            }
         }
 	}
 }
