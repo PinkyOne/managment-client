@@ -50,5 +50,41 @@ namespace WpfPrototype1Screens
         {
 
         }
+
+        private void Run_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("EgpCount");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Bank.Instance;
+            Max_Kol_EGP.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Max_Kol_ESM_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("EsmCount");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Bank.Instance;
+            Max_Kol_ESM.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Min_ESM_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("EsmPrice");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Bank.Instance;
+            Min_ESM.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Max_EGP_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("EgpPrice");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Bank.Instance;
+            Max_EGP.SetBinding(TextBlock.TextProperty, binding);
+        }
     }
 }

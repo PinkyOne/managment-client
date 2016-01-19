@@ -62,7 +62,8 @@
     <Reference Include="Microsoft.Expression.Prototyping.SketchControls" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client1.cs" />
+    <Compile Include="Bank.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>

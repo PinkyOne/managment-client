@@ -32,7 +32,7 @@
 
 	<Grid x:Name="LayoutRoot" Background="White">
 		<Grid x:Name="LayoutRoot_Copy" Background="White">
-			<Image x:Name="BACKGROUND" Source="registrationImages/BACKGROUND.png" Width="783" Height="587"/>
+			<Image x:Name="BACKGROUND" Source="BACKGROUND.png" Width="783" Height="587"/>
 			<Path x:Name="background" Data="F1M1,1C1,1 786,1 786,1 786,1 786,48.161 786,48.161 786,48.161 1,48.161 1,48.161 1,48.161 1,1 1,1z" Fill="#FF00D5C3" Height="50" VerticalAlignment="Top" Stretch="Fill"/>
 			<Rectangle Fill="Black" Opacity="0.52"/>
 			<Canvas x:Name="правила_imp" ClipToBounds="True" HorizontalAlignment="Left" Height="575" UseLayoutRounding="False" VerticalAlignment="Top" Width="783">

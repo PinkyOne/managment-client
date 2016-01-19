@@ -64,17 +64,17 @@ namespace WpfPrototype1Screens
 
 	    private void StartServer()
 	    {
-            var processInfo = new ProcessStartInfo("java.exe", @"-jar C:\Users\Alex\Documents\GitHub\managment\server\target\server-1.0-SNAPSHOT.jar")
+            var processInfo = new ProcessStartInfo("java.exe", @"-jar C:\Users\Alex\Documents\GitHub\managment\server\target\server-1.0-SNAPSHOT.jar 1111")
             {
-                CreateNoWindow = true,
+                CreateNoWindow = false,
                 UseShellExecute = false
             };
             Process proc;
 
-            if ((proc = Process.Start(processInfo)) == null)
-            {
-                throw new InvalidOperationException("??");
-            }
+            //if ((proc = Process.Start(processInfo)) == null)
+            //{
+            //    throw new InvalidOperationException("??");
+            //}
         }
 	}
 }
