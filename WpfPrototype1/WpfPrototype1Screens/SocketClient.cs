@@ -19,7 +19,8 @@ namespace WpfPrototype1Screens
         // Received data string.
         public StringBuilder sb = new StringBuilder();
     }
-    class SocketClient
+
+    public class SocketClient
     {
         // The port number for the remote device.
         private int port = 1234;
@@ -221,6 +222,21 @@ namespace WpfPrototype1Screens
             message.AddProperty("type", "state");
             Message resoponseMessage = SendMesssage(message);
             return resoponseMessage;
+        }
+
+        public Message MakeTurn(Client client)
+        {
+            Message message = new Message();
+            message.AddProperty("sessionId", Client.Instance.SessionId.ToString());
+            message.AddProperty("buildFabricCount", Client.Instance.BuyFCount.ToString());
+            message.AddProperty("automateFabricCount", Client.Instance.UpFCount.ToString());
+            message.AddProperty("buildAFabricCount", Client.Instance.BuyAFCount.ToString());
+            message.AddProperty("buildAFabricCount", Client.Instance.BuyAFCount.ToString());
+            message.AddProperty("loanCount", Client.Instance.NewLoan.ToString());
+            message.AddProperty("produceESM", "{\"count\":" + Client.Instance.ProduceESMCount + ",\"price\":" + Client.Instance.ProduceESMCost + "}");
+            message.AddProperty("esm", "{\"count\":" + Client.Instance.BuyESMCount + ",\"price\":" + Client.Instance.BuyESMCost + "}");
+            message.AddProperty("egp", "{\"count\":" + Client.Instance.SellEGPCount + ",\"price\":" + Client.Instance.SellEGPCost + "}");
+            return SendMesssage(message);
         }
     }
 

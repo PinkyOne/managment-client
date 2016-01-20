@@ -14,13 +14,13 @@ namespace WpfPrototype1Screens
 
         public string EsmCount
         {
-            get { return esmCount.ToString() + '$'; }
+            get { return esmCount.ToString() ; }
             set { esmCount = int.Parse(value.Substring(0, value.Length - 1)); }
         }
 
         public string EgpCount
         {
-            get { return egpCount.ToString() + '$'; }
+            get { return egpCount.ToString() ; }
             set { egpCount = int.Parse(value.Substring(0, value.Length - 1)); }
         }
 

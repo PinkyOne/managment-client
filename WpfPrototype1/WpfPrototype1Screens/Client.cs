@@ -27,13 +27,55 @@ namespace WpfPrototype1Screens
 
         public int Cash
         {
-            get { return cash; }
+            get { return cash - loan / 12 - esm * 300 - egp * 500 - BuyFCount * 5000 - UpFCount * 7000 - BuyAFCount * 10000; }
             set { cash = value; }
         }
 
+        public int BuyFCount { get; set; }
+
+        public int UpFCount { get; set; }
+
+        public int BuyAFCount { get; set; }
+
+        public int Dolg
+        {
+            get
+            {
+                dolg = esm * 300 + egp * 500 + BuyESMCount * BuyESMCost;
+                return dolg;
+            }
+            set { dolg = value; }
+        }
+
+        private int dolg;
+        private int buyESMCount = 1;
+
+        public int BuyESMCount
+        {
+            get { return buyESMCount; }
+            set
+            {
+                Dolg = 0;
+                buyESMCount = value;
+            }
+        }
+
+        public int BuyESMCost
+        {
+            get { return buyESMCost; }
+            set
+            {
+                Dolg = 0;
+                buyESMCost = value;
+            }
+        }
+
+        private int buyESMCost = 100;
+        public int NewLoan { get; set; }
+
         public int Loan
         {
-            get { return loan; }
+            get { return loan / 12; }
             set { loan = value; }
         }
 
@@ -68,7 +110,9 @@ namespace WpfPrototype1Screens
         }
 
         private Client()
-        { }
+        {
+            cash = 10000;
+        }
         public static Client Instance
         {
             get
@@ -87,5 +131,13 @@ namespace WpfPrototype1Screens
         }
 
         public int SessionId { get; set; }
+        public int SellEGPCost { get; set; }
+        public int SellEGPCount { get; set; }
+        public int ProduceESMCost { get; set; }
+        public int ProduceESMCount { get; set; }
+
+        public void Refresh(Message message)
+        {
+        }
     }
 }

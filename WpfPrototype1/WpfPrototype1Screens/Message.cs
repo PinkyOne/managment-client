@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace WpfPrototype1Screens
 {
-    class Message
+    public class Message
     {
         StringBuilder json;
         public Message(string response="")

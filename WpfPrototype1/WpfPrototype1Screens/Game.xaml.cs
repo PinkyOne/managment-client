@@ -91,6 +91,7 @@ namespace WpfPrototype1Screens
         {
             if (Kol_ESM.Text != null)
                 Kol_ESM.Text = (1 + int.Parse(Kol_ESM.Text)).ToString();
+            Ostatok.Text = Client.Instance.Cash.ToString();
         }
 
         private void CheckBox_Click(object sender, RoutedEventArgs e)
@@ -103,6 +104,7 @@ namespace WpfPrototype1Screens
         {
             if (Kol_ESM.Text != null)
                 Kol_ESM.Text = (-1 + int.Parse(Kol_ESM.Text)).ToString();
+            Ostatok.Text = Client.Instance.Cash.ToString();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -122,6 +124,7 @@ namespace WpfPrototype1Screens
             RadioButton checkBox = (sender as RadioButton);
             if (checkBox != null) checkBox.IsChecked = true;
             _10k.IsChecked = false;
+            Client.Instance.NewLoan = 5000;
         }
 
         private void _10k_Click(object sender, RoutedEventArgs e)
@@ -129,6 +132,8 @@ namespace WpfPrototype1Screens
             RadioButton checkBox = (sender as RadioButton);
             if (checkBox != null) checkBox.IsChecked = true;
             _5k.IsChecked = false;
+            Client.Instance.NewLoan = 10000;
+
         }
 
         private void button_Copy1_Click(object sender, RoutedEventArgs e)
@@ -153,6 +158,68 @@ namespace WpfPrototype1Screens
         {
             if (aFabCount.Text != null)
                 aFabCount.Text = (-1 + int.Parse(aFabCount.Text)).ToString();
+        }
+
+        private void Take_hod_Click(object sender, RoutedEventArgs e)
+        {
+            Client.Instance.Refresh(new SocketClient().MakeTurn(Client.Instance));
+        }
+
+        private void Dolg_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("Loan");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Client.Instance;
+            Dolg.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Rashod_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("Dolg");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Client.Instance;
+            Rashod.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Kol_ESM_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("BuyESMCount");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Client.Instance;
+            Kol_ESM.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Cost_ESM_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("BuyESMCost");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Client.Instance;
+            Cost_ESM.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Ostatok_Loaded(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.Path = new PropertyPath("Cash");
+            binding.Mode = BindingMode.TwoWay;
+            binding.Source = Client.Instance;
+            Ostatok.SetBinding(TextBlock.TextProperty, binding);
+        }
+
+        private void Kol_ESM_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Client.Instance.BuyESMCount = int.Parse(Kol_ESM.Text);
+            Ostatok.Text = Client.Instance.Cash.ToString();
+        }
+
+        private void Cost_ESM_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Client.Instance.BuyESMCost = int.Parse(Cost_ESM.Text);
+            Ostatok.Text = Client.Instance.Cash.ToString();
         }
     }
 }

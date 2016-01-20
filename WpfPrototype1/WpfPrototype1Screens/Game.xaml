@@ -212,9 +212,9 @@
                         <Button x:Name="button_Copy2" Content="^" Canvas.Left="292" Canvas.Top="243" Width="27" RenderTransformOrigin="0.778,3.75" Click="button_Copy2_Click"/>
                     </Canvas>
                     <Grid x:Name="Вводимые" Height="289" Canvas.Left="204" Width="202" Canvas.Top="3">
-                        <TextBox x:Name="Cost_ESM" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="#FF00D5C3" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Cost_EGP" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" Foreground="#FF00D5C3" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,59,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Kol_ESM" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" UndoLimit="6" Text="0"/>
+                        <TextBox x:Name="Cost_ESM" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="#FF00D5C3" HorizontalAlignment="Right" VerticalAlignment="Top" Loaded="Cost_ESM_Loaded" Text="0" LostFocus="Cost_ESM_LostFocus"/>
+                        <TextBox x:Name="Cost_EGP" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" Foreground="#FF00D5C3" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,59,0,0" VerticalAlignment="Top" Text="0"/>
+                        <TextBox x:Name="Kol_ESM" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" UndoLimit="6" Text="0" Loaded="Kol_ESM_Loaded" LostFocus="Kol_ESM_LostFocus"/>
                         <TextBox x:Name="Kol_EGP" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="0,0,0,184" VerticalAlignment="Bottom" Text="0"/>
                         <CheckBox Content="" Height="16.46" Width="17.441" Background="{x:Null}" BorderBrush="#FF00D5C3" Foreground="#FF00D5C3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="58.309,0,0,-37.71" VerticalAlignment="Bottom" Click="CheckBox_Click">
                             <CheckBox.RenderTransform>
@@ -278,9 +278,9 @@
                                 </Path.Fill>
                             </Path>
                             <Grid Height="106" Canvas.Left="218.001" Canvas.Top="8" Width="83">
-                                <TextBlock x:Name="Dolg" Height="30.5" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,-3.5,0,0"><Run Language="ru-ru" Text="0000"/></TextBlock>
-                                <TextBlock x:Name="Rashod" TextWrapping="Wrap" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,34.5,0,41"><Run Language="ru-ru" Text="0000"/></TextBlock>
-                                <TextBlock x:Name="Ostatok" TextWrapping="Wrap" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,0,0,1.682" Height="30.5" VerticalAlignment="Bottom"><Run Language="ru-ru" Text="0000"/></TextBlock>
+                                <TextBlock x:Name="Dolg" Height="30.5" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,-3.5,0,0" Loaded="Dolg_Loaded"><Run Language="ru-ru" Text="0000"/></TextBlock>
+                                <TextBlock x:Name="Rashod" TextWrapping="Wrap" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,34.5,0,41" Loaded="Rashod_Loaded"><Run Language="ru-ru" Text="0000"/></TextBlock>
+                                <TextBlock x:Name="Ostatok" TextWrapping="Wrap" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,0,0,1.682" Height="30.5" VerticalAlignment="Bottom" Loaded="Ostatok_Loaded"><Run Language="ru-ru" Text="0000"/></TextBlock>
                             </Grid>
                         </Canvas>
                         <TextBox x:Name="fabcount" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="0,0,0,61" VerticalAlignment="Bottom" Text="0"/>
@@ -474,17 +474,7 @@
                         </TransformGroup>
                     </Button.LayoutTransform>
                 </Button>
-                <Button x:Name="Take_hod" Content="Сделать ход" Height="35.5" Canvas.Left="584.5" Canvas.Top="456" Width="184.5" Background="#FF00D5C3" Foreground="White" FontFamily="Oswald" FontSize="18.667" Cursor="Hand" BorderBrush="{x:Null}" Margin="0" RenderTransformOrigin="0.5,0.5">
-                    <Button.LayoutTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Button.LayoutTransform>
-                </Button>
-                <Button x:Name="Otchet" Content="Сформировать отчёт" Height="35.5" Canvas.Left="584.5" Canvas.Top="411.5" Width="184.5" Background="#FF00D5C3" Foreground="White" FontFamily="Oswald" FontSize="18.667" Cursor="Hand" BorderBrush="{x:Null}" Margin="0" RenderTransformOrigin="0.5,0.5">
+                <Button x:Name="Take_hod" Content="Сделать ход" Height="35.5" Canvas.Left="584.5" Canvas.Top="456" Width="184.5" Background="#FF00D5C3" Foreground="White" FontFamily="Oswald" FontSize="18.667" Cursor="Hand" BorderBrush="{x:Null}" Margin="0" RenderTransformOrigin="0.5,0.5" Click="Take_hod_Click">
                     <Button.LayoutTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
