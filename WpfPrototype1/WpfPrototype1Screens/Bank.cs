@@ -12,37 +12,37 @@ namespace WpfPrototype1Screens
         private int esmCount, egpCount, esmPrice, egpPrice;
         List<KeyValuePair<string, int>> users;
 
-        public int EsmCount
+        public string EsmCount
         {
-            get { return esmCount; }
-            set { esmCount = value; }
+            get { return esmCount.ToString() + '$'; }
+            set { esmCount = int.Parse(value.Substring(0, value.Length - 1)); }
         }
 
-        public int EgpCount
+        public string EgpCount
         {
-            get { return egpCount; }
-            set { egpCount = value; }
+            get { return egpCount.ToString() + '$'; }
+            set { egpCount = int.Parse(value.Substring(0, value.Length - 1)); }
         }
 
-        public int EsmPrice
+        public string EsmPrice
         {
-            get { return esmPrice; }
-            set { esmPrice = value; }
+            get { return esmPrice.ToString() + '$'; }
+            set { esmPrice = int.Parse(value.Substring(0, value.Length - 1)); }
         }
 
-        public int EgpPrice
+        public string EgpPrice
         {
-            get { return egpPrice; }
-            set { egpPrice = value; }
+            get { return egpPrice.ToString() + '$'; }
+            set { egpPrice = int.Parse(value.Substring(0, value.Length - 1)); }
         }
         private Bank()
         {
             SocketClient socket = new SocketClient();
-          //  socket.SendMesssage();
-            egpCount = 0;
-            egpPrice = 0;
-            esmCount = 0;
-            esmPrice = 0;
+            Message state=  socket.GetBankState();
+            egpCount = int.Parse(state.GetProperty("egpCount").Substring(1, state.GetProperty("egpCount").Length-2));
+            egpPrice = int.Parse(state.GetProperty("egpPrice").Substring(1, state.GetProperty("egpPrice").Length - 2));
+            esmCount = int.Parse(state.GetProperty("esmCount").Substring(1, state.GetProperty("esmCount").Length - 2));
+            esmPrice = int.Parse(state.GetProperty("esmPrice").Substring(1, state.GetProperty("esmPrice").Length - 2));
         }
 
         public static Bank Instance

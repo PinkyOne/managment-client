@@ -209,10 +209,18 @@ namespace WpfPrototype1Screens
             Message message = new Message();
             message.AddProperty("type", "connect");
             message.AddProperty("name", client.Name);
-            Message resoinseMessage = SendMesssage(message);
-            string sessionId = resoinseMessage.GetProperty("sessionId");
+            Message resoponseMessage = SendMesssage(message);
+            string sessionId = resoponseMessage.GetProperty("sessionId");
             if (sessionId == null) throw new NotEnouthSpaceException();
             return int.Parse(sessionId.Substring(1, sessionId.Length - 2));
+        }
+
+        public Message GetBankState()
+        {
+            Message message = new Message();
+            message.AddProperty("type", "state");
+            Message resoponseMessage = SendMesssage(message);
+            return resoponseMessage;
         }
     }
 

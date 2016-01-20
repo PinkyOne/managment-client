@@ -153,22 +153,12 @@
                             </Path>
                         </Canvas>
                         <Canvas x:Name="Купить_фабрику" Height="47" Canvas.Left="60" Canvas.Top="181" Width="343">
-                            <Path x:Name="inputfield_копия_7" Data="F1M6.678,1.847C6.678,1.847 82.184,1.847 82.184,1.847 84.945,1.847 87.184,4.086 87.184,6.847 87.184,6.847 87.184,38.665 87.184,38.665 87.184,41.427 84.945,43.665 82.184,43.665 82.184,43.665 6.678,43.665 6.678,43.665 3.917,43.665 1.678,41.427 1.678,38.665 1.678,38.665 1.678,6.847 1.678,6.847 1.678,4.086 3.917,1.847 6.678,1.847z" Height="45" Canvas.Left="141" Canvas.Top="0" Width="89">
-                                <Path.Fill>
-                                    <SolidColorBrush Color="#FFFFFFFF" Opacity="0.102"/>
-                                </Path.Fill>
-                            </Path>
                             <TextBlock x:Name="Купить_фабрику_простую" Foreground="#FFFFFFFF" FontSize="29.333" FontFamily="Oswald" Height="86.899" LineStackingStrategy="BlockLineHeight" Canvas.Left="-1.068" LineHeight="38" TextAlignment="Left" TextWrapping="Wrap" Canvas.Top="4.415" Width="264.548">
                                 <TextBlock.RenderTransform>
                                     <MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
                                 </TextBlock.RenderTransform><Run Text="Купить фабрику"/><Run Text="&#xa;простую"/></TextBlock>
                         </Canvas>
                         <Canvas x:Name="Купить_фабрику_копия" Height="48" Canvas.Left="59" Canvas.Top="243" Width="344">
-                            <Path x:Name="inputfield_копия_5" Data="F1M6.678,1.575C6.678,1.575 82.184,1.575 82.184,1.575 84.945,1.575 87.184,3.813 87.184,6.575 87.184,6.575 87.184,38.393 87.184,38.393 87.184,41.154 84.945,43.393 82.184,43.393 82.184,43.393 6.678,43.393 6.678,43.393 3.917,43.393 1.678,41.154 1.678,38.393 1.678,38.393 1.678,6.575 1.678,6.575 1.678,3.813 3.917,1.575 6.678,1.575z" Height="45" Canvas.Left="142" Canvas.Top="1" Width="89">
-                                <Path.Fill>
-                                    <SolidColorBrush Color="#FFFFFFFF" Opacity="0.102"/>
-                                </Path.Fill>
-                            </Path>
                             <TextBlock x:Name="Купить_фабрику_автоматизированную_" Foreground="#FFFFFFFF" FontSize="29.333" FontFamily="Oswald" Height="94.145" LineStackingStrategy="BlockLineHeight" Canvas.Left="-0.068" LineHeight="38" TextAlignment="Left" TextWrapping="Wrap" Text="Купить фабрику автоматизированную " Canvas.Top="1.143" Width="274.449">
                                 <TextBlock.RenderTransform>
                                     <MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
@@ -218,15 +208,14 @@
                         </Canvas>
                         <Button x:Name="button" Content="^" Canvas.Left="292" Canvas.Top="60" Width="27" Click="button_Click"/>
                         <Button x:Name="button_Copy" Content="^" Canvas.Left="292" Canvas.Top="4" Width="27" Click="button_Copy_Click"/>
-                        <Button x:Name="button_Copy1" Content="^" Canvas.Left="292" Canvas.Top="181" Width="27" RenderTransformOrigin="0.778,3.75"/>
-                        <Button x:Name="button_Copy2" Content="^" Canvas.Left="292" Canvas.Top="243" Width="27" RenderTransformOrigin="0.778,3.75"/>
+                        <Button x:Name="button_Copy1" Content="^" Canvas.Left="292" Canvas.Top="181" Width="27" RenderTransformOrigin="0.778,3.75" Click="button_Copy1_Click"/>
+                        <Button x:Name="button_Copy2" Content="^" Canvas.Left="292" Canvas.Top="243" Width="27" RenderTransformOrigin="0.778,3.75" Click="button_Copy2_Click"/>
                     </Canvas>
                     <Grid x:Name="Вводимые" Height="289" Canvas.Left="204" Width="202" Canvas.Top="3">
                         <TextBox x:Name="Cost_ESM" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="#FF00D5C3" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                         <TextBox x:Name="Cost_EGP" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" Foreground="#FF00D5C3" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,59,0,0" VerticalAlignment="Top"/>
                         <TextBox x:Name="Kol_ESM" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" UndoLimit="6" Text="0"/>
                         <TextBox x:Name="Kol_EGP" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="0,0,0,184" VerticalAlignment="Bottom" Text="0"/>
-                        <TextBox x:Name="Kol_Auto" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
                         <CheckBox Content="" Height="16.46" Width="17.441" Background="{x:Null}" BorderBrush="#FF00D5C3" Foreground="#FF00D5C3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="58.309,0,0,-37.71" VerticalAlignment="Bottom" Click="CheckBox_Click">
                             <CheckBox.RenderTransform>
                                 <TransformGroup>
@@ -294,11 +283,13 @@
                                 <TextBlock x:Name="Ostatok" TextWrapping="Wrap" Foreground="#FF00D5C3" FontFamily="Oswald" FontSize="21.333" TextAlignment="Right" Margin="0,0,0,1.682" Height="30.5" VerticalAlignment="Bottom"><Run Language="ru-ru" Text="0000"/></TextBlock>
                             </Grid>
                         </Canvas>
+                        <TextBox x:Name="fabcount" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="0,0,0,61" VerticalAlignment="Bottom" Text="0"/>
+                        <TextBox x:Name="aFabCount" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Text="0"/>
                     </Grid>
                     <Button x:Name="button1" Content="\/" Canvas.Left="296" Canvas.Top="86" Width="25" Click="button1_Click"/>
                     <Button x:Name="button1_Copy" Content="\/" Canvas.Left="296" Canvas.Top="32" Width="25" Click="button1_Copy_Click"/>
-                    <Button x:Name="button1_Copy1" Content="\/" Canvas.Left="296" Canvas.Top="212" Width="25" RenderTransformOrigin="0.72,8.1"/>
-                    <Button x:Name="button1_Copy2" Content="\/" Canvas.Left="296" Canvas.Top="272" Width="25" RenderTransformOrigin="0.72,8.1"/>
+                    <Button x:Name="button1_Copy1" Content="\/" Canvas.Left="296" Canvas.Top="212" Width="25" RenderTransformOrigin="0.72,8.1" Click="button1_Copy1_Click"/>
+                    <Button x:Name="button1_Copy2" Content="\/" Canvas.Left="296" Canvas.Top="272" Width="25" RenderTransformOrigin="0.72,8.1" Click="button1_Copy2_Click"/>
                 </Canvas>
                 <Canvas x:Name="Банк" Height="228" Canvas.Left="468" Canvas.Top="143" Width="301">
                     <Canvas x:Name="Банк1" Height="228" Canvas.Left="0" Canvas.Top="0" Width="301">

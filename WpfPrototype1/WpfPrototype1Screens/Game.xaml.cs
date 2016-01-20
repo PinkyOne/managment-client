@@ -120,15 +120,39 @@ namespace WpfPrototype1Screens
         private void _5k_Click(object sender, RoutedEventArgs e)
         {
             RadioButton checkBox = (sender as RadioButton);
-            if (checkBox != null) checkBox.IsChecked = !checkBox.IsChecked;
+            if (checkBox != null) checkBox.IsChecked = true;
             _10k.IsChecked = false;
         }
 
         private void _10k_Click(object sender, RoutedEventArgs e)
         {
             RadioButton checkBox = (sender as RadioButton);
-            if (checkBox != null) checkBox.IsChecked = !checkBox.IsChecked;
+            if (checkBox != null) checkBox.IsChecked = true;
             _5k.IsChecked = false;
+        }
+
+        private void button_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            if (fabcount.Text != null)
+                fabcount.Text = (1 + int.Parse(fabcount.Text)).ToString();
+        }
+
+        private void button1_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            if (fabcount.Text != null)
+                fabcount.Text = (-1 + int.Parse(fabcount.Text)).ToString();
+        }
+
+        private void button_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+            if (aFabCount.Text != null)
+                aFabCount.Text = (1 + int.Parse(aFabCount.Text)).ToString();
+        }
+
+        private void button1_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+            if (aFabCount.Text != null)
+                aFabCount.Text = (-1 + int.Parse(aFabCount.Text)).ToString();
         }
     }
 }
