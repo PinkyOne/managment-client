@@ -17,12 +17,13 @@ namespace WpfPrototype1Screens
 
         public string GetProperty(string property)
         {
-            Regex regex = new Regex("(\""+property+"\":(\"\\w + \"|{}|{[A-Za-z0-9\"{}:]+}))");
+            Regex regex = 
+                new Regex("\""+property+"\":(\"\\w+\"|{}|{[A-Za-z0-9\"{}:]+})");
             Match m = regex.Match(json.ToString());
             string value = null;
             if (m.Success)
             {
-                value=m.Groups[0].Value;
+                value=m.Groups[1].Value;
             }
             
             return value;

@@ -31,12 +31,12 @@
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot" Background="White" Width="783" Height="587">
-        
+
         <Canvas x:Name="Игровое_поле_imp" ClipToBounds="True" HorizontalAlignment="Left" Height="587" UseLayoutRounding="False" VerticalAlignment="Top" Width="783">
             <Canvas x:Name="Группа_2" Height="595" Canvas.Left="-6" Canvas.Top="-7" Width="792">
                 <Image x:Name="BACKGROUND" Height="595" Source="BACKGROUND.png" Canvas.Top="0" Width="792" Canvas.Left="5"/>
                 <Canvas x:Name="Действия_игрока" Height="466" Canvas.Left="20" Canvas.Top="123" Width="411">
-                    <Path x:Name="background" Data="F1M1.006,1.149C1.006,1.149 409.577,1.149 409.577,1.149 409.577,1.149 409.577,347.312 409.577,347.312 409.577,347.312 1.006,347.312 1.006,347.312 1.006,347.312 1.006,1.149 1.006,1.149z" Height="349" Canvas.Left="0" Canvas.Top="0" Width="411">
+                    <Path x:Name="background" Data="F1M1.006,1.149C1.006,1.149 409.577,1.149 409.577,1.149 409.577,1.149 409.577,347.312 409.577,347.312 409.577,347.312 1.006,347.312 1.006,347.312 1.006,347.312 1.006,1.149 1.006,1.149z" Height="349" Canvas.Left="3" Canvas.Top="0" Width="411">
                         <Path.Fill>
                             <SolidColorBrush Color="#FF20232A" Opacity="0.851"/>
                         </Path.Fill>
@@ -47,7 +47,7 @@
                                 <MatrixTransform Matrix="0.505,0,0,0.506,0,0"/>
                             </TextBlock.RenderTransform>
                         </TextBlock>
-                        <Button Content="Button" Canvas.Left="292" Style="{DynamicResource Izmen Kol}" Canvas.Top="4" Width="27"/>
+                        <Button Content="Button" Canvas.Left="-165" Style="{DynamicResource Izmen Kol}" Canvas.Top="46" Width="27"/>
                         <Canvas x:Name="Не_меняемое" Height="335" Canvas.Left="15" Canvas.Top="4" Width="39">
                             <Canvas x:Name="Круги" Height="335" Canvas.Left="0" Canvas.Top="0" Width="39">
                                 <Path x:Name="Clipping_Mask4" Data="F1M17.937,1.28C27.002,1.28 34.35,8.64 34.35,17.719 34.35,26.797 27.002,34.157 17.937,34.157 8.872,34.157 1.524,26.797 1.524,17.719 1.524,8.64 8.872,1.28 17.937,1.28z" Fill="#FFB595FB" Height="36" Canvas.Left="2" Canvas.Top="1" Width="36"/>
@@ -216,14 +216,18 @@
                                 </TextBlock.RenderTransform>
                             </TextBlock>
                         </Canvas>
+                        <Button x:Name="button" Content="^" Canvas.Left="292" Canvas.Top="60" Width="27" Click="button_Click"/>
+                        <Button x:Name="button_Copy" Content="^" Canvas.Left="292" Canvas.Top="4" Width="27" Click="button_Copy_Click"/>
+                        <Button x:Name="button_Copy1" Content="^" Canvas.Left="292" Canvas.Top="181" Width="27" RenderTransformOrigin="0.778,3.75"/>
+                        <Button x:Name="button_Copy2" Content="^" Canvas.Left="292" Canvas.Top="243" Width="27" RenderTransformOrigin="0.778,3.75"/>
                     </Canvas>
                     <Grid x:Name="Вводимые" Height="289" Canvas.Left="204" Width="202" Canvas.Top="3">
                         <TextBox x:Name="Cost_ESM" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="#FF00D5C3" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                         <TextBox x:Name="Cost_EGP" Height="45" TextWrapping="Wrap" Width="76" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" Foreground="#FF00D5C3" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,59,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Kol_ESM" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" UndoLimit="6"/>
-                        <TextBox x:Name="Kol_EGP" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="0,0,0,184" VerticalAlignment="Bottom"/>
+                        <TextBox x:Name="Kol_ESM" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" UndoLimit="6" Text="0"/>
+                        <TextBox x:Name="Kol_EGP" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="0,0,0,184" VerticalAlignment="Bottom" Text="0"/>
                         <TextBox x:Name="Kol_Auto" Height="45" TextWrapping="Wrap" Width="87" FontFamily="Oswald" FontSize="21.333" Background="{x:Null}" TextAlignment="Right" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                        <CheckBox Content="" Height="16.46" Width="17.441" Background="{x:Null}" BorderBrush="#FF00D5C3" Foreground="#FF00D5C3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="58.309,0,0,-37.71" VerticalAlignment="Bottom">
+                        <CheckBox Content="" Height="16.46" Width="17.441" Background="{x:Null}" BorderBrush="#FF00D5C3" Foreground="#FF00D5C3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="58.309,0,0,-37.71" VerticalAlignment="Bottom" Click="CheckBox_Click">
                             <CheckBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform ScaleX="2" ScaleY="2"/>
@@ -233,7 +237,7 @@
                                 </TransformGroup>
                             </CheckBox.RenderTransform>
                         </CheckBox>
-                        <RadioButton x:Name="_5k" Content="&#xa;" Width="14.74" Background="{x:Null}" BorderBrush="#FF00D5C3" RenderTransformOrigin="0.294,-0.124" Foreground="#FF00D5C3" HorizontalAlignment="Left" Margin="78.63,137.663,0,135.663">
+                        <RadioButton x:Name="_5k" Content="&#xa;" Width="14.74" Background="{x:Null}" BorderBrush="#FF00D5C3" RenderTransformOrigin="0.294,-0.124" Foreground="#FF00D5C3" HorizontalAlignment="Left" Margin="78.63,137.663,0,135.663" Click="_5k_Click">
                             <RadioButton.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform ScaleX="2.3" ScaleY="2.3"/>
@@ -243,7 +247,7 @@
                                 </TransformGroup>
                             </RadioButton.RenderTransform>
                         </RadioButton>
-                        <RadioButton x:Name="_10k" Content="&#xa;" Width="14.74" Background="{x:Null}" BorderBrush="#FF00D5C3" RenderTransformOrigin="0.294,-0.124" Foreground="#FF00D5C3" HorizontalAlignment="Right" Margin="0,135.663,6.63,137.663">
+                        <RadioButton x:Name="_10k" Content="&#xa;" Width="14.74" Background="{x:Null}" BorderBrush="#FF00D5C3" RenderTransformOrigin="0.294,-0.124" Foreground="#FF00D5C3" HorizontalAlignment="Right" Margin="0,135.663,6.63,137.663" Click="_10k_Click">
                             <RadioButton.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform ScaleX="2.3" ScaleY="2.3"/>
@@ -291,6 +295,10 @@
                             </Grid>
                         </Canvas>
                     </Grid>
+                    <Button x:Name="button1" Content="\/" Canvas.Left="296" Canvas.Top="86" Width="25" Click="button1_Click"/>
+                    <Button x:Name="button1_Copy" Content="\/" Canvas.Left="296" Canvas.Top="32" Width="25" Click="button1_Copy_Click"/>
+                    <Button x:Name="button1_Copy1" Content="\/" Canvas.Left="296" Canvas.Top="212" Width="25" RenderTransformOrigin="0.72,8.1"/>
+                    <Button x:Name="button1_Copy2" Content="\/" Canvas.Left="296" Canvas.Top="272" Width="25" RenderTransformOrigin="0.72,8.1"/>
                 </Canvas>
                 <Canvas x:Name="Банк" Height="228" Canvas.Left="468" Canvas.Top="143" Width="301">
                     <Canvas x:Name="Банк1" Height="228" Canvas.Left="0" Canvas.Top="0" Width="301">

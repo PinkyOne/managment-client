@@ -77,7 +77,7 @@
 							<MatrixTransform Matrix="0.654,0,0,0.654,0,0"/>
 						</TextBlock.RenderTransform>
 					</TextBlock>
-					<Button x:Name="Connect" Content="Button" Height="50" Style="{DynamicResource Ngame}" Width="49" Background="#FF1FD6C1" Canvas.Left="39">
+					<Button x:Name="Connect" Content="Button" Height="50" Style="{DynamicResource Ngame}" Width="49" Background="#FF1FD6C1" Canvas.Left="39" Click="Connect_Click_1">
 						<i:Interaction.Triggers>
 							<i:EventTrigger EventName="Click">
 								<pi:NavigateToScreenAction TargetScreen="WpfPrototype1Screens.Load"/>

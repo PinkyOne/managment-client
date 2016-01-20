@@ -32,7 +32,8 @@
 
 	<Grid x:Name="LayoutRoot" Background="White">
 		<Grid x:Name="LayoutRoot_Copy" Background="White">
-			<Image x:Name="BACKGROUND" Source="BACKGROUND.png" Width="783" Height="587"/>
+			<Image x:Name="BACKGROUND" Source
+                   ="BACKGROUND.png" Width="783" Height="587"/>
 			<Path x:Name="background" Data="F1M1,1C1,1 786,1 786,1 786,1 786,48.161 786,48.161 786,48.161 1,48.161 1,48.161 1,48.161 1,1 1,1z" Fill="#FF00D5C3" Height="50" VerticalAlignment="Top" Stretch="Fill"/>
 			<Rectangle Fill="Black" Opacity="0.52"/>
 			<Canvas x:Name="правила_imp" ClipToBounds="True" HorizontalAlignment="Left" Height="575" UseLayoutRounding="False" VerticalAlignment="Top" Width="783">
@@ -46,7 +47,7 @@
 										<SolidColorBrush Color="#FF1D2331" Opacity="0.102"/>
 									</Path.Fill>
 								</Path>
-								<Button Content="Дальше" Height="37" Canvas.Left="396.5" Canvas.Top="284" Width="106" Background="#FF161A21" BorderBrush="#FF3F3D3D" Foreground="White" FontFamily="Oswald"/>
+								<Button Content="Дальше" Height="37" Canvas.Left="396.5" Canvas.Top="284" Width="106" Background="#FF161A21" BorderBrush="#FF3F3D3D" Foreground="White" FontFamily="Oswald" Click="Button_Click"/>
 								<TextBlock x:Name="ТЕКСТ" Foreground="White" FontSize="90.488" FontFamily="Oswald" Height="1044.258" LineStackingStrategy="BlockLineHeight" Canvas.Left="312.855" LineHeight="90.488" TextAlignment="Center" TextWrapping="Wrap" Text="Введите IP" Canvas.Top="10.071" Width="756.057">
 									<TextBlock.RenderTransform>
 										<MatrixTransform Matrix="0.254,0,0,0.254,0,0"/>

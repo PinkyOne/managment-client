@@ -45,8 +45,8 @@
 									<SolidColorBrush Color="#FF1D2331" Opacity="0.102"/>
 								</Path.Fill>
 							</Path>
-							<TextBox Height="30" Canvas.Left="86" TextWrapping="Wrap" Text="102.23.44.22" Canvas.Top="103" Width="176" FontFamily="Oswald" FontSize="18.667" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="#FF00D5C3"/>
-							<Button Content="Подключиться" Height="37" Canvas.Left="122" Canvas.Top="158" Width="106" Background="#FF161A21" BorderBrush="#FF3F3D3D" Foreground="White" FontFamily="Oswald">
+							<TextBox x:Name="IpAddress" Height="30" Canvas.Left="86" TextWrapping="Wrap" Text="102.23.44.22" Canvas.Top="103" Width="176" FontFamily="Oswald" FontSize="18.667" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="#FF00D5C3" LostFocus="IpAddress_LostFocus"/>
+							<Button Content="Подключиться" Height="37" Canvas.Left="122" Canvas.Top="158" Width="106" Background="#FF161A21" BorderBrush="#FF3F3D3D" Foreground="White" FontFamily="Oswald" Click="Button_Click">
 								<i:Interaction.Triggers>
 									<i:EventTrigger EventName="Click">
 										<pi:NavigateToScreenAction TargetScreen="WpfPrototype1Screens.Game"/>

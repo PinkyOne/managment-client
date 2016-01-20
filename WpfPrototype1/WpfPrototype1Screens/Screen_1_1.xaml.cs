@@ -60,7 +60,14 @@ namespace WpfPrototype1Screens
 	    private void Ngame_Click(object sender, RoutedEventArgs e)
 	    {
 	        StartServer();
-	        Client.Instance.SessionId = new SocketClient().Connect(Client.Instance);
+	        try
+	        {
+                Client.Instance.SessionId = new SocketClient().Connect(Client.Instance);
+            }
+	        catch (NotEnouthSpaceException exception)
+	        {
+	        }
+	        
 	    }
 
 	    private void StartServer()
@@ -79,5 +86,10 @@ namespace WpfPrototype1Screens
             SocketClient client=new SocketClient();
 	        client.StartNewgame();
 	    }
-	}
+
+        private void Connect_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
 }

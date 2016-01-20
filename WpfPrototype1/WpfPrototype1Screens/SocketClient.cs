@@ -53,7 +53,7 @@ namespace WpfPrototype1Screens
                 // The name of the 
                 // remote device is "host.contoso.com".
 
-                var ipAddress = IPAddress.Parse(address);
+                var ipAddress = IPAddress.Parse(Address ?? address);
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
 
                 // Create a TCP/IP socket.
@@ -210,7 +210,13 @@ namespace WpfPrototype1Screens
             message.AddProperty("type", "connect");
             message.AddProperty("name", client.Name);
             Message resoinseMessage = SendMesssage(message);
-            return int.Parse(resoinseMessage.GetProperty("sessionId"));
+            string sessionId = resoinseMessage.GetProperty("sessionId");
+            if (sessionId == null) throw new NotEnouthSpaceException();
+            return int.Parse(sessionId.Substring(1, sessionId.Length - 2));
         }
+    }
+
+    public class NotEnouthSpaceException : Exception
+    {
     }
 }
