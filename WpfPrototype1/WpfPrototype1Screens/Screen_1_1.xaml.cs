@@ -57,10 +57,11 @@ namespace WpfPrototype1Screens
                .Start(@"HELP.chm");
         }
 
-        private void Ngame_Click(object sender, RoutedEventArgs e)
-        {
-            StartServer();
-        }
+	    private void Ngame_Click(object sender, RoutedEventArgs e)
+	    {
+	        StartServer();
+	        Client.Instance.SessionId = new SocketClient().Connect(Client.Instance);
+	    }
 
 	    private void StartServer()
 	    {
@@ -75,6 +76,8 @@ namespace WpfPrototype1Screens
             //{
             //    throw new InvalidOperationException("??");
             //}
-        }
+            SocketClient client=new SocketClient();
+	        client.StartNewgame();
+	    }
 	}
 }

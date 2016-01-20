@@ -25,18 +25,26 @@ namespace WpfPrototype1Screens
         private int port = 1234;
 
         // ManualResetEvent instances signal completion.
-        private static ManualResetEvent connectDone =
+        private ManualResetEvent connectDone =
             new ManualResetEvent(false);
-        private static ManualResetEvent sendDone =
+        private ManualResetEvent sendDone =
             new ManualResetEvent(false);
-        private static ManualResetEvent receiveDone =
+        private ManualResetEvent receiveDone =
             new ManualResetEvent(false);
 
         // The response from the remote device.
-        private static String response = String.Empty;
-        private static string ipAddress;
+        private String response = string.Empty;
+        private string address = "127.0.0.1";
 
-        private static void StartClient()
+        public int Port
+        {
+            get { return port; }
+            set { port = value; }
+        }
+
+        public static string Address { get; set; }
+
+        public Message SendMesssage(Message message)
         {
             // Connect to a remote device.
             try
@@ -44,10 +52,9 @@ namespace WpfPrototype1Screens
                 // Establish the remote endpoint for the socket.
                 // The name of the 
                 // remote device is "host.contoso.com".
-                IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
-                if(SocketClient.ipAddress==null)SocketClient.ipAddress = "localhost";
-                IPAddress ipAddress =IPAddress.Parse(SocketClient.ipAddress);
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 1234);
+
+                var ipAddress = IPAddress.Parse(address);
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
 
                 // Create a TCP/IP socket.
                 Socket client = new Socket(AddressFamily.InterNetwork,
@@ -59,7 +66,8 @@ namespace WpfPrototype1Screens
                 connectDone.WaitOne();
 
                 // Send test data to the remote device.
-                Send(client, "This is a test<EOF>");
+                string requestString = message.GetAsString();
+                Send(client, requestString);
                 sendDone.WaitOne();
 
                 // Receive the response from the remote device.
@@ -72,15 +80,16 @@ namespace WpfPrototype1Screens
                 // Release the socket.
                 client.Shutdown(SocketShutdown.Both);
                 client.Close();
-
+                return new Message(response);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
+                return new Message();
             }
         }
 
-        private static void ConnectCallback(IAsyncResult ar)
+        private void ConnectCallback(IAsyncResult ar)
         {
             try
             {
@@ -102,7 +111,7 @@ namespace WpfPrototype1Screens
             }
         }
 
-        private static void Receive(Socket client)
+        private void Receive(Socket client)
         {
             try
             {
@@ -120,7 +129,7 @@ namespace WpfPrototype1Screens
             }
         }
 
-        private static void ReceiveCallback(IAsyncResult ar)
+        private void ReceiveCallback(IAsyncResult ar)
         {
             try
             {
@@ -158,7 +167,7 @@ namespace WpfPrototype1Screens
             }
         }
 
-        private static void Send(Socket client, String data)
+        private void Send(Socket client, String data)
         {
             // Convert the string data to byte data using ASCII encoding.
             byte[] byteData = Encoding.ASCII.GetBytes(data);
@@ -168,7 +177,7 @@ namespace WpfPrototype1Screens
                 new AsyncCallback(SendCallback), client);
         }
 
-        private static void SendCallback(IAsyncResult ar)
+        private void SendCallback(IAsyncResult ar)
         {
             try
             {
@@ -186,6 +195,22 @@ namespace WpfPrototype1Screens
             {
                 Console.WriteLine(e.ToString());
             }
+        }
+
+        public void StartNewgame()
+        {
+            Message request = new Message();
+            request.AddProperty("type", "create");
+            Message response = SendMesssage(request);
+        }
+
+        public int Connect(Client client)
+        {
+            Message message = new Message();
+            message.AddProperty("type", "connect");
+            message.AddProperty("name", client.Name);
+            Message resoinseMessage = SendMesssage(message);
+            return int.Parse(resoinseMessage.GetProperty("sessionId"));
         }
     }
 }

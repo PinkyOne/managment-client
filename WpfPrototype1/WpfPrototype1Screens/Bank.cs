@@ -37,6 +37,8 @@ namespace WpfPrototype1Screens
         }
         private Bank()
         {
+            SocketClient socket = new SocketClient();
+          //  socket.SendMesssage();
             egpCount = 0;
             egpPrice = 0;
             esmCount = 0;

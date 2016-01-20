@@ -48,7 +48,11 @@
 										</i:EventTrigger>
 									</i:Interaction.Triggers>
 								</Button>
-								<DataGrid Height="216" Canvas.Left="8" Canvas.Top="83" Width="234" Background="{x:Null}" BorderBrush="#FF00D5C3" Foreground="White" GridLinesVisibility="Horizontal" IsReadOnly="True"/>
+								<DataGrid Height="216" Canvas.Left="8" Canvas.Top="83" Width="234" Background="{x:Null}" BorderBrush="#FF00D5C3" Foreground="White" GridLinesVisibility="Horizontal" IsReadOnly="True">
+                                    <DataGrid.CanUserAddRows>
+                                        True
+                                    </DataGrid.CanUserAddRows>
+                                </DataGrid>
 							</Canvas>
 							<Canvas x:Name="Content" Height="122" Canvas.Left="124" Canvas.Top="68" Width="102"/>
 							<Canvas x:Name="Title" Height="45" Canvas.Left="0" Canvas.Top="0" Width="349">

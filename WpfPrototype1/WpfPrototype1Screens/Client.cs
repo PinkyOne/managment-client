@@ -85,5 +85,7 @@ namespace WpfPrototype1Screens
                 return instance;
             }
         }
+
+        public int SessionId { get; set; }
     }
 }
